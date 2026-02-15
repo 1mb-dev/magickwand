@@ -1,7 +1,7 @@
 # magickwand
 
 [![Node.js Version](https://img.shields.io/node/v/magickwand.svg)](https://nodejs.org)
-[![CI](https://github.com/vnykmshr/magickwand/actions/workflows/ci.yml/badge.svg)](https://github.com/vnykmshr/magickwand/actions/workflows/ci.yml)
+[![CI](https://github.com/1mb-dev/magickwand/actions/workflows/ci.yml/badge.svg)](https://github.com/1mb-dev/magickwand/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Note**: This is an independent fork of the original [magickwand](https://www.npmjs.com/package/magickwand) package (v0.0.11), modernized for Node.js v24 and ImageMagick 7. This version (v1.1.0) is not published to npm.
@@ -68,7 +68,7 @@ brew install imagemagick --without-openmp
 
 ```bash
 # Clone this repository
-git clone https://github.com/vnykmshr/magickwand.git
+git clone https://github.com/1mb-dev/magickwand.git
 cd magickwand
 
 # Install dependencies and build native module
@@ -78,7 +78,7 @@ npm install
 Or install directly from GitHub in your project:
 
 ```bash
-npm install https://github.com/vnykmshr/magickwand.git
+npm install https://github.com/1mb-dev/magickwand.git
 ```
 
 ## Usage

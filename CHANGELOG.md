@@ -255,7 +255,7 @@ magickwand.thumbnail('/path/to/image.jpg', {
 
 ---
 
-[1.0.0]: https://github.com/vnykmshr/magickwand/releases/tag/v1.0.0
-[0.0.12]: https://github.com/vnykmshr/magickwand/releases/tag/v0.0.12
+[1.0.0]: https://github.com/1mb-dev/magickwand/releases/tag/v1.0.0
+[0.0.12]: https://github.com/1mb-dev/magickwand/releases/tag/v0.0.12
 [0.0.11]: Historical version from original upstream project
 [0.0.10]: Historical version from original upstream project

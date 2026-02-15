@@ -333,7 +333,7 @@ Should show: `C:\Python3x\python.exe` (not `/usr/bin/python`)
 
 ## Still Having Issues?
 
-1. Check existing [GitHub Issues](https://github.com/vnykmshr/magickwand/issues)
+1. Check existing [GitHub Issues](https://github.com/1mb-dev/magickwand/issues)
 2. Run with verbose logging to get more details
 3. Include the following in bug reports:
    - Node.js version (`node --version`)

@@ -19,7 +19,7 @@ We take the security of magickwand seriously. If you discover a security vulnera
 
 Instead, report security issues through:
 
-- **GitHub Security Advisory:** https://github.com/vnykmshr/magickwand/security/advisories/new
+- **GitHub Security Advisory:** https://github.com/1mb-dev/magickwand/security/advisories/new
 
 This ensures the issue is handled privately until a fix is available.
 
@@ -113,7 +113,7 @@ Image processing libraries can be targets for malicious files:
 
 Security updates are published through:
 
-1. **GitHub Security Advisories**: https://github.com/vnykmshr/magickwand/security/advisories
+1. **GitHub Security Advisories**: https://github.com/1mb-dev/magickwand/security/advisories
 2. **npm Advisory Database**: https://www.npmjs.com/advisories
 3. **CHANGELOG.md**: All security fixes are documented
 
@@ -125,7 +125,7 @@ To stay informed:
 ## Contact
 
 For non-security issues, please use:
-- GitHub Issues: https://github.com/vnykmshr/magickwand/issues
-- Repository Homepage: https://github.com/vnykmshr/magickwand
+- GitHub Issues: https://github.com/1mb-dev/magickwand/issues
+- Repository Homepage: https://github.com/1mb-dev/magickwand
 
 Thank you for helping keep magickwand and its users safe!

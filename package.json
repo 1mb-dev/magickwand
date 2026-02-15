@@ -22,12 +22,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vnykmshr/magickwand.git"
+    "url": "git+https://github.com/1mb-dev/magickwand.git"
   },
   "bugs": {
-    "url": "https://github.com/vnykmshr/magickwand/issues"
+    "url": "https://github.com/1mb-dev/magickwand/issues"
   },
-  "homepage": "https://github.com/vnykmshr/magickwand#readme",
+  "homepage": "https://github.com/1mb-dev/magickwand#readme",
   "keywords": [
     "imagemagick",
     "image",
