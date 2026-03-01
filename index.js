@@ -46,9 +46,9 @@ function validateImagePath(imagefile) {
     return resolvedPath;
   } catch (err) {
     if (err.code === 'ENOENT') {
-      throw new Error(`Image file not found: ${path.basename(imagefile)}`);
+      throw new Error(`Image file not found: ${path.basename(imagefile)}`, { cause: err });
     } else if (err.code === 'EACCES') {
-      throw new Error(`Image file not readable: ${path.basename(imagefile)}`);
+      throw new Error(`Image file not readable: ${path.basename(imagefile)}`, { cause: err });
     }
     throw err;
   }
