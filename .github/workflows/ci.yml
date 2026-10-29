@@ -2,9 +2,17 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+  # A Dependabot auto-merge is pushed by GITHUB_TOKEN, which starts no push run, so main is
+  # unverified until the next daily run. Dispatch verifies it on demand.
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -14,16 +22,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # macOS (brew) builds against ImageMagick 7, Ubuntu (apt) against 6: the addon
+        # compiles a different code path for each.
         os: [macos-latest, ubuntu-latest]
-        node-version: [20.x, 22.x]
+        node-version: ["22", "24"]
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ matrix.node-version }}
+        check-latest: true
 
     - name: Install ImageMagick (macOS)
       if: runner.os == 'macOS'
@@ -51,7 +62,7 @@ jobs:
         fi
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run linter
       run: npm run lint
@@ -60,5 +71,19 @@ jobs:
       run: npm test
 
     - name: Run coverage (Ubuntu only)
-      if: runner.os == 'Linux' && matrix.node-version == '20.x'
+      if: runner.os == 'Linux' && matrix.node-version == '24'
       run: npm run test:coverage
+
+  # Stable-named gate for the ruleset: matrix check names carry the OS and Node version.
+  ci-result:
+    name: CI Result
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: always()
+    steps:
+      - name: Verify every job succeeded
+        env:
+          NEEDS: ${{ toJSON(needs) }}
+        run: |
+          echo "$NEEDS" | jq -r 'to_entries[] | "\(.key): \(.value.result)"'
+          echo "$NEEDS" | jq -e 'all(.[]; .result == "success")' >/dev/null

@@ -15,13 +15,13 @@ Native Node.js bindings for ImageMagick - High-performance image resizing and ma
 - **Auto-crop**: Smart cropping with gravity at center
 - **Format Conversion**: Convert between image formats (JPEG, PNG, etc.)
 - **Aspect Ratio**: Automatic aspect ratio preservation
-- **Modern**: Built for Node.js v10+ with ImageMagick 7 support
+- **Modern**: Built for Node.js v22+ with ImageMagick 7 support
 - **Well-tested**: Comprehensive test suite with 36 tests and 100% coverage
 
 ## Requirements
 
 ### Node.js
-- Node.js >= 10.0.0 (tested up to v24.x)
+- Node.js >= 22 (tested on v22 and v24)
 
 ### ImageMagick
 
